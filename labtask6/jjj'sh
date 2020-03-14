@@ -1,0 +1,26 @@
+#!/bin/bash
+#bash menu script exmple
+PS3='please enter your choice:'
+options=("ls" "du" "df" "quit")
+select opt in "${options[@]}"
+do
+   case $opt in
+    "ls")
+echo "you choose ls"
+ls
+;;
+    "du")
+echo "you choose du"
+du
+;;
+  "df")
+echo "your choose df"
+df
+;;
+"quit")
+break
+;;
+*)echo "invalid option $reply";;
+esac
+done
+
